@@ -6,9 +6,6 @@ struct Node
     int info;
     struct Node *next;
 };
-// *head;
-
-// struct Node *head;
 
 struct Node *getNode(int data)
 {
@@ -39,46 +36,46 @@ void insertBeg(struct Node **head, int info)
     newNode->next = *head;
     *head = newNode;
 }
-/*
+
 void insertLast(struct Node **head, int info)
 {
-   struct Node *newNode =  getNode(info);
+    struct Node *newNode = getNode(info);
     if (head == NULL)
     {
         *head = newNode;
         return;
     }
-   struct Node *temp = head;
+    struct Node *temp = head;
     while (temp->next != NULL)
         temp = temp->next;
     temp->next = newNode;
 }
-/*
-Node *search(Node *&head, int data)
+
+struct Node *search(struct Node *head, int data)
 {
-    Node *temp = head;
-    while (temp != nullptr)
+    struct Node *temp = head;
+    while (temp != NULL)
     {
         if (temp->info == data)
             return temp;
         temp = temp->next;
     }
-    return nullptr;
+    return NULL;
 }
 
-void insertAfter(Node *&head, int data, int info)
+void insertAfter(struct Node **head, int data, int info)
 {
-    Node *temp = search(head, data);
-    if (temp == nullptr)
+    struct Node *temp = search(*head, data);
+    if (temp == NULL)
     {
-        cout  data  " not found" ;
+        printf("%d not found", data);
         return;
     }
-    Node *newNode = new Node(info);
+    struct Node *newNode = getNode(info);
     newNode->next = temp->next;
     temp->next = newNode;
 }
-
+/*
 void removeBeg(Node *&head)
 {
 }
@@ -113,34 +110,34 @@ int main()
             scanf("%d", &info);
             insertBeg(&head, info);
             break;
-            /*
+
         case 2:
             printf("Enter info: ");
-            scanf("%d",&info);
-             insertLast(&head,info);
+            scanf("%d", &info);
+            insertLast(&head, info);
             break;
             /*
-        case 3:
-            cout "unimplementd";
-            break;
-        case 4:
-            cout "unimplementd";
-            break;
-        case 5:
-            cout "unimplementd";
-            break;
-        case 6:
-            cout "unimplementd";
-            break;
-        case 7:
-            cout "unimplementd";
-            break;
-            */
+       case 3:
+           cout "unimplementd";
+           break;
+       case 4:
+           cout "unimplementd";
+           break;
+       case 5:
+           cout "unimplementd";
+           break;
+       case 6:
+           cout "unimplementd";
+           break;
+       case 7:
+           cout "unimplementd";
+           break;
+           */
         case 8:
             traverse(head);
             break;
         case 9:
-            printf("This code is executed by Rajkumar Thakur with Roll no 2400320100882");
+            printf("\nThis code is executed by Mr. Rajkumar Thakur with Roll No 2400320100882\n");
             break;
         default:
             printf("Not defined yet");
